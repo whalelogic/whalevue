@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  }
+
+  body {
+    @apply bg-gray-900 text-gray-100 min-h-screen;
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200;
+  }
+
+  .nav-link-active {
+    @apply bg-purple-600 text-white;
+  }
+
+  .nav-link-inactive {
+    @apply text-gray-300 hover:bg-gray-700 hover:text-white;
+  }
+
+  .skill-tag {
+    @apply text-xs bg-gray-700 text-white px-3 py-1 rounded-full hover:bg-purple-600 transition-colors duration-200 cursor-default;
+  }
+
+  .post-card {
+    @apply border-t border-gray-700 py-6 hover:bg-gray-800/50 transition-colors duration-200 rounded-lg px-4 -mx-4;
+  }
+
+  .project-card {
+    @apply bg-gray-800 rounded-lg p-6 hover:bg-gray-700 transition-all duration-200 hover:scale-105;
+  }
+}
